@@ -1,0 +1,51 @@
+.navContainer {
+  height: 5rem;
+  width: 100vw;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex; /* Add this */
+  align-items: center;
+  justify-content: space-between; /* Space between logo and nav menu */
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: #1f1f1f; /* Add a background color for visibility */
+}
+/* porfolio logo  */
+
+  .logo{
+   object-fit: cover;
+    height: 3rem;
+    width: 4rem;
+  }
+  
+.navbarListItem{
+ margin: 1rem;
+ cursor: pointer;
+
+
+}
+.navbarListItem:hover{
+  color:#f39c12;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #f39c12;
+}
+.ContactButton{
+  background-color: white;
+  color: black;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  border-radius: 2rem;
+
+}
+.Contactlogo{
+object-fit: cover;
+height: 1rem;
+width: 1rem;
+margin: 1rem;
+
+}

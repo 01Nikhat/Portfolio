@@ -1,0 +1,166 @@
+/* .intro{
+  height: calc(100vh - 4rem);
+  width: 100vw;
+  max-width: 75rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+
+}
+.leftContainer{
+
+}
+.hello{
+
+}
+.introText{
+
+}
+.introName{
+
+}
+.intrDescription{
+
+}
+.resume{
+  object-fit: cover;
+  height: 4rem;
+  width: 4rem;
+}
+.rightContainer{
+position: absolute;
+top: -4rem;
+z-index: -1;
+right: 0;
+object-fit: cover;
+border-radius: 500rem;
+} */
+/* Ensure intro section takes full viewport */
+/* The entire section that takes up full viewport */
+#intro {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Video container to hold video and shadow */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Ensure nothing overflows */
+}
+
+/* Darker shadow effect */
+.video-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Darker semi-transparent shadow */
+  filter: blur(30px); /* Increased blur for a softer shadow */
+  z-index: 1; /* Keep it on top of the video */
+}
+
+/* Video itself */
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio */
+  z-index: 0; /* Keep video below the shadow */
+}
+
+/* Content container */
+.content-container {
+  position: relative;
+  z-index: 2; /* Ensure content is above video */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.leftContainer {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Text shadow for readability */
+}
+
+/* Additional styling for text */
+.hello {
+  font-size: 2.5rem;
+}
+
+.introText {
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+
+.introName {
+  color: #f39c12;
+}
+
+.intrDescription {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+.resumeButton{
+ text-align: center;
+ text-decoration: none;
+ letter-spacing: 4px;
+ box-shadow: 0 0 50px rgba(0,0,0,0,0.8);
+ color: #269af5;
+ background: linear-gradient(90deg,#269af5,#ff22a3,#fca93f,#269af5);
+ background-size: 400px;
+ border-radius: 5rem;
+ position: absolute; /* Change to absolute */
+  top: 70%; /* Position from the top */
+  left: 50%; /* Position from the left */
+  transform: translate(-50%, -50%); /* Center the element */
+}
+.resumeButton span{
+  display: flex;
+  padding: 25px 30px;
+  min-width: 150px;
+  background: #020718;
+  mix-blend-mode: darken;
+  border-radius: 0.8rem;
+  
+}
+.resumeButton:hover{
+  animation: animate-gradient 10s linear infinite;
+}
+@keyframes animate-gradient {
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+.resumeButton:before{
+  content:"" ;
+  position:absolute ;
+  top:-4px;
+  bottom: -4px;
+  left: -4px;
+  right: -4px;
+  background: linear-gradient(90deg,#269af5,#ff22a3,#fca93f,#269af5);
+  background-size: 400px;
+  z-index: -1;
+  filter: blur(20px) ;
+  transition: 0.6s;
+}
+.resumeButton:hover::before{
+  opacity: 1;
+  animation: animate-gradient 10s linear infinite;
+}
+
+
