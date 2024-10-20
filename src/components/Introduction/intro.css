@@ -65,7 +65,13 @@
 }
 
 .introName {
-  color: #f39c12;
+  background: linear-gradient(90deg, #269af5, #ff22a3, #fca93f, #269af5); /* Gradient colors */
+  -webkit-background-clip: text; /* For Safari */
+  background-clip: text; /* For other browsers */
+  color: transparent; /* Make the text color transparent to see the gradient */
+  font-size: 4rem; /* Adjust font size as needed */
+  display: inline-block; /* Ensure the gradient effect applies correctly */
+  
 }
 
 .intrDescription {
