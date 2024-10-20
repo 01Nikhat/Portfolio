@@ -1,42 +1,4 @@
-/* .intro{
-  height: calc(100vh - 4rem);
-  width: 100vw;
-  max-width: 75rem;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
 
-}
-.leftContainer{
-
-}
-.hello{
-
-}
-.introText{
-
-}
-.introName{
-
-}
-.intrDescription{
-
-}
-.resume{
-  object-fit: cover;
-  height: 4rem;
-  width: 4rem;
-}
-.rightContainer{
-position: absolute;
-top: -4rem;
-z-index: -1;
-right: 0;
-object-fit: cover;
-border-radius: 500rem;
-} */
-/* Ensure intro section takes full viewport */
-/* The entire section that takes up full viewport */
 #intro {
   position: relative;
   width: 100%;
@@ -111,6 +73,7 @@ border-radius: 500rem;
   font-size: 1.2rem;
   max-width: 600px;
 }
+/* Resume button animation start here  */
 .resumeButton{
  text-align: center;
  text-decoration: none;
@@ -161,6 +124,66 @@ border-radius: 500rem;
 .resumeButton:hover::before{
   opacity: 1;
   animation: animate-gradient 10s linear infinite;
+}
+/* Resume button animation start here  */
+
+
+/* Media Queries for Responsiveness */
+
+/* Tablet (up to 768px) */
+@media (max-width: 768px) {
+  .hello {
+    font-size: 2rem;
+  }
+
+  .introText {
+    font-size: 2.5rem;
+  }
+
+  .introName {
+    font-size: 1.5rem;
+  }
+
+  .intrDescription {
+    font-size: 1rem;
+  }
+
+  .resumeButton {
+    top: 60%; /* Adjust position */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .resumeButton span {
+    padding: 20px 25px; /* Adjust padding */
+  }
+}
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .hello {
+    font-size: 1.5rem;
+  }
+
+  .introText {
+    font-size: 2rem;
+  }
+
+  .introName {
+    font-size: 1.2rem;
+  }
+
+  .intrDescription {
+    font-size: 0.9rem;
+  }
+
+  .resumeButton {
+    top: 55%; /* Adjust position */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .resumeButton span {
+    padding: 15px 20px; /* Adjust padding */
+  }
 }
 
 
