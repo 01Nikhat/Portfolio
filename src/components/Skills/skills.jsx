@@ -7,6 +7,8 @@ const Skills = () => {
     <section id='skillsContainer'> 
            <a href="">Html</a>
            <a href="">css</a>
+           <a href="">ReactJS</a>
+           <a href="">React Native</a>
     </section>
 
   )
