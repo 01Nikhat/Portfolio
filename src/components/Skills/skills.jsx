@@ -5,7 +5,8 @@ import "./skills.css"
 const Skills = () => {
   return (
     <section id='skillsContainer'> 
-            About Section
+           <a href="">Html</a>
+           <a href="">css</a>
     </section>
 
   )
