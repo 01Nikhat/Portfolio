@@ -12,8 +12,9 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh; /* Full height to cover the entire screen */
   overflow: hidden; /* Ensure nothing overflows */
+  z-index: 1;
 }
 
 /* Darker shadow effect */
@@ -57,11 +58,14 @@
 /* Additional styling for text */
 .hello {
   font-size: 2.5rem;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: .7s;
 }
 
 .introText {
   font-size: 3rem;
-  margin-top: 1rem;
+  
 }
 
 .introName {
@@ -78,6 +82,34 @@
   margin-top: 1rem;
   font-size: 1.2rem;
   max-width: 600px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: .7s;
+}
+/* Scial Media on Home Page Animation   */
+.social a{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+width: 40px;
+height: 40px;
+background: transparent;
+border: 2px solid #0ef;
+border-radius: 50%;
+font-size: 20px;
+color: #0ef;
+text-decoration: none;
+margin: 30px 15px 30px 0;
+z-index: 2;
+
+}
+.social a:hover{
+  background: #0ef;
+  color: #020718;
+  box-shadow: 0 0 20px #0ef;
+
 }
 /* Resume button animation start here  */
 .resumeButton{
@@ -85,14 +117,17 @@
  text-decoration: none;
  letter-spacing: 4px;
  box-shadow: 0 0 50px rgba(0,0,0,0,0.8);
- color: #269af5;
- background: linear-gradient(90deg,#269af5,#ff22a3,#fca93f,#269af5);
+ color: #0ef;
+ background: linear-gradient(90deg,#0ef,#ff22a3,#fca93f,#269af5);
  background-size: 400px;
  border-radius: 5rem;
  position: absolute; /* Change to absolute */
-  top: 70%; /* Position from the top */
+ top: 85%; /* Position from the top */
   left: 50%; /* Position from the left */
   transform: translate(-50%, -50%); /* Center the element */
+  margin-top: 5rem;
+ z-index: 1;
+  
 }
 .resumeButton span{
   display: flex;
@@ -101,6 +136,9 @@
   background: #020718;
   mix-blend-mode: darken;
   border-radius: 0.8rem;
+  padding: 25px 30px; /* Keep the original padding */
+  max-width: 90%; /* Use percentage instead of vw to prevent overflow */
+  box-sizing: border-box; /* Ensure padding is included in the width */
   
 }
 .resumeButton:hover{
@@ -139,57 +177,77 @@
 /* Tablet (up to 768px) */
 @media (max-width: 768px) {
   .hello {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .introText {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   .introName {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 
   .intrDescription {
     font-size: 1rem;
+    justify-content: center;
+    align-items: center;
   }
-
   .resumeButton {
-    top: 60%; /* Adjust position */
-    padding: 15px; /* Adjust padding */
+    top: 70%; /* Adjust positioning */
+    
   }
 
   .resumeButton span {
-    padding: 20px 25px; /* Adjust padding */
+    padding: 0.75rem 1.5rem; /* Adjust padding */
+    font-size: 0.9rem; /* Smaller text */
+    align-items: center;
+    justify-content: center;
   }
+  
 }
+
+
+
 
 /* Mobile (up to 480px) */
 @media (max-width: 480px) {
   .hello {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .introText {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   .introName {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .intrDescription {
     font-size: 0.9rem;
+    justify-content: center;
   }
 
   .resumeButton {
-    top: 55%; /* Adjust position */
-    padding: 10px; /* Adjust padding */
+    top: 72%; /* Further adjust top positioning */
+    
   }
 
   .resumeButton span {
-    padding: 15px 20px; /* Adjust padding */
+    padding: 0.6rem 1rem; /* Smaller padding */
+    font-size: 0.8rem; /* Smaller text */
   }
 }
 
-
+/* slideLeft Effect  */
+@keyframes slideRight {
+  0%{
+    transform: translateX(-100px);/* Moves up from 100px above */
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px); /* Moves to its original position */
+    opacity: 1;
+  }
+}

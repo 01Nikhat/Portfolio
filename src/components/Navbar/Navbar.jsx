@@ -2,7 +2,8 @@ import React from 'react'
 import {Link} from "react-scroll";
 import github from "../../images/github.png";
 import "./navbar.css";
-import contact from "../../images/contact.png"
+import contact from "../../images/contact.png";
+
 
 
 
@@ -13,11 +14,11 @@ const Navbar = () => {
       <p className='logo'>PORTFOLIO</p>
      
       <div className="navMenu">
-        <Link className='navbarListItem'>Home</Link>
-        <Link className='navbarListItem'>About</Link>
-        <Link className='navbarListItem'>Skills</Link>
-        <Link className='navbarListItem'>Experience</Link>
-        <Link className='navbarListItem'>Projects</Link>
+      <Link to="home" smooth={true} duration={500} className='navbarListItem'>Home</Link>
+      <Link to="about" smooth={true} duration={500} className='navbarListItem'>About</Link>
+      <Link to="skills" smooth={true} duration={500} className='navbarListItem'>Skills</Link>
+      <Link to="experience" smooth={true} duration={500} className='navbarListItem'>Experience</Link>
+      <Link to="projects" smooth={true} duration={500} className='navbarListItem'>Projects</Link>
       </div>
      
       <button className="ContactButton">
