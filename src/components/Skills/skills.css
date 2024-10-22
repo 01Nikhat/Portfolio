@@ -1,0 +1,37 @@
+.skillsContainer {
+  border-bottom: 1px solid #1f2937;
+  padding-bottom: 96px;
+}
+
+.skillsTag {
+  margin-top: 60px;
+  margin-bottom: 80px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold; /* font-weight accepts numeric values like 400, 700 etc., not 4 */
+}
+
+.skillsContainerList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.skills {
+  border-radius: 16px;
+  border-width: 4px;
+  border-color: #1f2937;
+  border-style: solid;
+  padding: 10px;
+  display: flex;
+  justify-content: center; /* Center the icon */
+  align-items: center;
+  width: 100px; /* Set a fixed width for the skills box */
+  height: 100px; /* Set a fixed height for the skills box */
+}
+.react-icons{
+  font-size: 5rem; /* Equivalent to text-7xl */
+  color: #22d3ee;  /* Equivalent to text-cyan-400 */
+}
