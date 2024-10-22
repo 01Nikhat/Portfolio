@@ -8,7 +8,7 @@
   margin-bottom: 80px;
   text-align: center;
   font-size: 24px;
-  font-weight: bold; /* font-weight accepts numeric values like 400, 700 etc., not 4 */
+  font-weight: bold; /* Use numeric values for font-weight */
 }
 
 .skillsContainerList {
@@ -26,12 +26,20 @@
   border-style: solid;
   padding: 10px;
   display: flex;
-  justify-content: center; /* Center the icon */
-  align-items: center;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center the items */
+  align-items: center; /* Center the items */
   width: 100px; /* Set a fixed width for the skills box */
-  height: 100px; /* Set a fixed height for the skills box */
+  height: 120px; /* Adjusted height to fit the tag below the icon */
 }
-.react-icons{
-  font-size: 5rem; /* Equivalent to text-7xl */
-  color: #22d3ee;  /* Equivalent to text-cyan-400 */
+
+.react-icons {
+  font-size: 6rem; /* Increase the icon size */
+  color: #22d3ee; /* Equivalent to text-cyan-400 */
+}
+
+.tag {
+  margin-top: 8px; /* Add some space between the icon and the tag */
+  font-size: 1rem; /* Adjust font size for the tag */
+  text-align: center; /* Center the tag text */
 }
