@@ -1,15 +1,20 @@
 import React, { useEffect } from 'react';
 import profile from "../../images/dp.jpg";
 import "./AboutMe.css";
+import { Tilt } from "react-tilt";
 
 const AboutMe = () => {
  
   return (
     <div className="aboutmeContainer">
       <div className="leftContainer">
+      <Tilt>
         <div className="image-container">
+          
           <img src={profile} alt="Profile Picture" />
+          
         </div>
+        </Tilt>
       </div>
 
       <div className="rightContainer">

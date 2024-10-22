@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar'
 import Intro from './components/Introduction/Intro'
 import Skills from './components/Skills/skills'
 import AboutMe from './components/AboutMe/AboutMe'
+import Project from './components/Projects/Project'
 
 function App() {
   
@@ -13,6 +14,7 @@ function App() {
     <Navbar />
     <Intro />
     <AboutMe />
+    <Project />
     <Skills />
    </div>
   )

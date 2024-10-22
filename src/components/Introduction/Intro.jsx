@@ -41,9 +41,9 @@ const Intro = () => {
               I am a skilled web Developer with Experience in creating visually appealing and user-friendly websites.
             </p>
               <div className="social">
-                <a href="#"><box-icon type='logo' name='github'></box-icon></a>
-                <a href="#"><box-icon type='logo' name='linkedin-square'></box-icon></a>
-                <a href="#"><box-icon type='logo' name='facebook-circle'></box-icon></a>
+                <a href="#"><box-icon   type='logo' name='github'></box-icon></a>
+                <a href="#"><box-icon   type='logo' name='linkedin-square'></box-icon></a>
+                <a href="#"><box-icon   type='logo' name='facebook-circle'></box-icon></a>
               </div>
               <a className='resumeButton'><span>RESUME</span> </a>
            
