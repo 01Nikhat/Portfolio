@@ -25,7 +25,11 @@ const iconVariants = (duration) => ({
 const Skills = () => {
   return (
     <div className="skillsContainer">
-      <h1 className="skillsTag">Skills</h1>
+      <motion.h1 
+      whileInView={{opacity:1,y:0}}
+      initial={{opacity:0,y:-100}}
+      transition={{duration:1.5}}
+      className="skillsTag">Skills</motion.h1>
       <motion.div whileInView={{opacity:1,x:0}} 
       initial ={{opacity:0,x:-100}}
       transition={{duration:1.5}}
