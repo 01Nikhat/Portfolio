@@ -2,12 +2,13 @@
 
 .outerContainer {
   position: relative;
-  height: 100vh;
+  min-height: 100vh; /* Ensures container is at least the full viewport height */
   width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  flex-wrap: wrap; /* Helps with responsive stacking on smaller screens */
 }
 
 .starContainer {
@@ -19,7 +20,6 @@
   z-index: 1;
 }
 
-
 .motionContainer {
   position: relative;
   z-index: 2;
@@ -30,7 +30,6 @@
   margin-left: 2rem;
 }
 
-/* Other styles remain the same */
 .sectionSubText {
   font-size: 1rem;
   color: white;
@@ -46,12 +45,11 @@
   text-align: center;
 }
 
-/* Form styles */
 .form {
   margin-top: 3rem;
   display: flex;
-  flex-direction: column; /* Stack children vertically */
-  gap: 2rem; /* Space between form elements */
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .label {
@@ -68,9 +66,9 @@
 .inputName,
 .inputEmail,
 .inputMessage {
-  background-color: #f0f0f0; /* Light background color */
+  background-color: #f0f0f0;
   padding: 1rem;
-  color: black; /* Input text color */
+  color: black;
   border-radius: 0.5rem;
   outline: none;
   border: none;
@@ -80,16 +78,16 @@
 .inputName::placeholder,
 .inputEmail::placeholder,
 .inputMessage::placeholder {
-  color: #6b7280; /* Placeholder color */
+  color: #6b7280;
 }
 
 .btn {
-  background-color: #f0f0f0; /* Button background color */
-  padding: 0.75rem 2rem; /* Button padding */
-  border-radius: 0.75rem; /* Button border radius */
-  color: black; /* Button text color */
-  font-weight: bold; /* Bold text */
-  cursor: pointer; /* Pointer cursor on hover */
+  background-color: #f0f0f0;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* Earth style for larger screens */
@@ -99,22 +97,52 @@
   height: 500px;
   z-index: 2;
   width: 50%;
+  object-fit: contain; /* Ensures EarthCanvas scales properly */
+  transition: height 0.5s ease; /* Smooth transition on height change */
 }
-/* Move EarthCanvas to top and adjust layout for smaller screens */
+
+/* Adjust layout and size for smaller screens */
 @media (max-width: 768px) {
   .outerContainer {
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
+    min-height: auto;
   }
 
   .motionContainer {
     width: 80%;
     margin: 0;
+    padding: 1.5rem;
   }
 
   .earthStyle {
     width: 100%;
-    height: 300px;
+    height: 300px; /* Ensure Earth is visible but not too tall */
+    max-height: 30vh;
+    order: -1;
+    z-index: 2;
+    margin-bottom: 1.5rem;
+    object-fit: contain;
+  }
+
+  .starContainer {
+    display: none;
+  }
+}
+
+/* For very small screens (phones) */
+@media (max-width: 480px) {
+  .earthStyle {
+    max-height: 25vh;
+    width: 100%;
+    height: 200px; /* Further limit the height */
+    margin-bottom: 1rem;
+  }
+
+  .motionContainer {
+    width: 90%;
+    padding: 1rem;
   }
 }

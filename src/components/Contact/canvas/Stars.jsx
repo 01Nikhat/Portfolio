@@ -28,16 +28,15 @@ const Stars = (props) => {
 };
 
 const StarsCanvas = () => {
-  // Define the styles as a JavaScript object
   const styles = {
-    width: '100%',            // Equivalent to w-full
-    height: '100vh',         // Use height of viewport for full cover
-    position: 'absolute',     // Equivalent to absolute
-    top: 0,                   // Equivalent to inset-0
-    right: 0,                 // Equivalent to inset-0
-    bottom: 0,                // Equivalent to inset-0
-    left: 0,                  // Equivalent to inset-0
-    zIndex: -1,              // Equivalent to z-[-1]
+    width: '100%',
+    height: '100vh',
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    zIndex: -1,  // Keep it behind the content
   };
 
   return (
