@@ -1,0 +1,105 @@
+
+.Container {
+  position: relative; /* Allows for absolute positioning of child elements */
+  height: 100vh; /* Full height of the viewport */
+  width: 100vw; /* Full width of the viewport */
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* StarsCanvas covers the entire background */
+.starContainer {
+  position: absolute; /* Absolutely positioned to fill the container */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  z-index: 1; /* Behind other content */
+}
+
+/* Motion container for the form */
+.motionContainer {
+  position: relative; /* Position relative to allow z-index control */
+  padding: 2rem; /* Padding around the form */
+  border-radius: 1rem; /* Rounded corners */
+  z-index: 2; /* Above the stars canvas */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+}
+
+/* Other styles remain unchanged */
+.sectionSubText {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.sectionHeadText {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Form styles */
+.form {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  gap: 2rem; /* Space between form elements */
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.inputName,
+.inputEmail,
+.inputMessage {
+  background-color: #f0f0f0; /* Light background color */
+  padding: 1rem;
+  color: black; /* Input text color */
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  font-weight: 500;
+}
+
+.inputName::placeholder,
+.inputEmail::placeholder,
+.inputMessage::placeholder {
+  color: #6b7280; /* Placeholder color */
+}
+
+.btn {
+  background-color: #f0f0f0; /* Button background color */
+  padding: 0.75rem 2rem; /* Button padding */
+  border-radius: 0.75rem; /* Button border radius */
+  color: black; /* Button text color */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.earthStyle {
+  flex: 1; /* Allow EarthCanvas to fill the remaining space */
+  height: 350px; /* Default height */
+}
+
+@media (min-width: 768px) {
+  .earthStyle {
+    height: 550px; /* Height for medium screens */
+  }
+}
+
+@media (min-width: 1280px) {
+  .earthStyle {
+    height: auto; /* Auto height for extra-large screens */
+  }
+}
