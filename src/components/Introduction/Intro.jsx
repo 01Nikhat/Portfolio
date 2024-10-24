@@ -2,7 +2,7 @@ import React from 'react';
 import "./intro.css";
 import Video from '../../images/video.mp4';
 import { Link } from "react-scroll";
-import Resume from "../../images/cv.png";
+import Resume from "../../images/Resume.pdf";
 import Typewriter from 'typewriter-effect';
 import 'boxicons'
 
@@ -45,7 +45,7 @@ const Intro = () => {
                 <a href="#"><box-icon   type='logo' name='linkedin-square'></box-icon></a>
                 <a href="#"><box-icon   type='logo' name='facebook-circle'></box-icon></a>
               </div>
-              <a className='resumeButton'><span>RESUME</span> </a>
+              <a className='resumeButton' href={Resume}><span>RESUME</span> </a>
            
           </div>
         </div>
