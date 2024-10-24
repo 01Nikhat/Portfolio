@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import "./intro.css";
 import Video from '../../images/video.mp4';
-import { Link } from "react-scroll";
 import Resume from "../../images/Resume.pdf";
 import Typewriter from 'typewriter-effect';
 import 'boxicons';
 import Modal from "../modal/modal.jsx"; // Import the Modal component
+import {motion} from "framer-motion";
 
 const Intro = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -45,7 +45,13 @@ const Intro = () => {
 
         <div className="content-container">
           <div className="leftContainer">
+          <motion.div 
+              whileInView={{opacity:1,x:0}}
+              initial={{opacity:0,x:-100}}
+              transition={{duration:0.5}}
+              className="leftSlide">
             <span className="hello">Hello , I am </span>
+            </motion.div>
             <span className="introText">
               <span className="introName">
                 <Typewriter 
@@ -62,10 +68,15 @@ const Intro = () => {
                 />
               </span>
             </span>
-            
+            <motion.div
+              whileInView={{opacity:1,x:0}}
+              initial={{opacity:0,x:100}}
+              transition={{duration:0.5}}
+              className="rightSlider">
             <p className="intrDescription">
               I am a skilled web Developer with Experience in creating visually appealing and user-friendly websites.
             </p>
+            </motion.div>
             <div className="social">
               <a href="#"><box-icon type='logo' name='github'></box-icon></a>
               <a href="#"><box-icon type='logo' name='linkedin-square'></box-icon></a>
@@ -84,7 +95,7 @@ const Intro = () => {
       </section>
       
       {modalOpen && <Modal onClose={handleCloseModal} resume={Resume} />}
-      <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+     
     </div>
   );
 }
