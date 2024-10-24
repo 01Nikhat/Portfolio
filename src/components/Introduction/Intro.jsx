@@ -1,12 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "./intro.css";
 import Video from '../../images/video.mp4';
 import { Link } from "react-scroll";
 import Resume from "../../images/Resume.pdf";
 import Typewriter from 'typewriter-effect';
-import 'boxicons'
+import 'boxicons';
+import Modal from "../modal/modal.jsx"; // Import the Modal component
 
 const Intro = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false); // State to check for mobile
+
+  const handleResumeClick = () => {
+    if (!isMobile) {
+      setModalOpen(true); // Open modal if not on mobile
+    }
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false); // Close modal
+  };
+
+  // Check window size and set mobile state
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize); // Listen for resize
+
+    return () => window.removeEventListener('resize', handleResize); // Clean up
+  }, []);
+
   return (
     <div>
       <section id="intro">
@@ -21,7 +47,7 @@ const Intro = () => {
           <div className="leftContainer">
             <span className="hello">Hello , I am </span>
             <span className="introText">
-             <span className="introName">
+              <span className="introName">
                 <Typewriter 
                   options={{
                     strings: [
@@ -40,16 +66,24 @@ const Intro = () => {
             <p className="intrDescription">
               I am a skilled web Developer with Experience in creating visually appealing and user-friendly websites.
             </p>
-              <div className="social">
-                <a href="#"><box-icon   type='logo' name='github'></box-icon></a>
-                <a href="#"><box-icon   type='logo' name='linkedin-square'></box-icon></a>
-                <a href="#"><box-icon   type='logo' name='facebook-circle'></box-icon></a>
-              </div>
-              <a className='resumeButton' href={Resume}><span>RESUME</span> </a>
-           
+            <div className="social">
+              <a href="#"><box-icon type='logo' name='github'></box-icon></a>
+              <a href="#"><box-icon type='logo' name='linkedin-square'></box-icon></a>
+              <a href="#"><box-icon type='logo' name='facebook-circle'></box-icon></a>
+            </div>
+            <button className='resumeButton' onClick={handleResumeClick}>
+              <span>RESUME</span> 
+            </button>
+            {isMobile && (
+              <a href={Resume} className='resumeButton'>
+                <span>Download Resume</span>
+              </a>
+            )}
           </div>
         </div>
       </section>
+      
+      {modalOpen && <Modal onClose={handleCloseModal} resume={Resume} />}
       <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     </div>
   );
