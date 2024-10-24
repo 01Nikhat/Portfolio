@@ -1,3 +1,5 @@
+/* General styles for the navbar */
+
 .navContainer {
   width: 100vw;
   height: 5rem;
@@ -33,6 +35,22 @@
   animation: slideTop 1s ease forwards;
   flex-direction: row;
 }
+/* sliding animation start */
+.navbarListItem:nth-child(1) {
+  animation-delay: 0.1s; /* Add delay for smooth flow */
+}
+.navbarListItem:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.navbarListItem:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.navbarListItem:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.navbarListItem:nth-child(5) {
+  animation-delay: 0.5s;
+}
 
 .navbarListItem:hover {
   color: #0ef;
@@ -40,7 +58,7 @@
   border-bottom: 3px solid #0ef;
 }
 
-/* Sliding effect */
+/* Sliding effects */
 @keyframes slideRight {
   0% {
     transform: translateX(-100px);
@@ -52,7 +70,6 @@
   }
 }
 
-/* Sliding animation */
 @keyframes slideTop {
   0% {
     transform: translateY(-100px);
@@ -64,13 +81,13 @@
   }
 }
 
-/* Hide sidebar icons by default */
+/* Sidebar styles are hidden by default */
 .sidebarMenu,
 .sidebarCross {
   display: none;
 }
 
-/*-------------------------------Tab Screen--------------------------*/
+/*-----------------------Mobile Screen (max-width: 600px)-------------------------*/
 @media (max-width: 600px) {
   .navMenu {
     display: none;
@@ -79,7 +96,7 @@
   .navMenu.open {
     display: flex;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 0;
     right: 0;
@@ -93,6 +110,7 @@
   .sidebarMenu {
     display: block;
     z-index: 11;
+    margin-right: 50px;
   }
 
   /* Show cross icon when open */
@@ -106,7 +124,7 @@
 
   .navbarListItem {
     opacity: 1;
-    margin: 1rem 0;
+    margin: 1rem 2rem;
     text-align: center;
     color: white;
   }
@@ -115,5 +133,41 @@
     color: #0ef;
     padding-bottom: 0.5rem;
     border-bottom: 3px solid #0ef;
+  }
+}
+
+/*---------------------- Smaller screens (max-width: 400px)--------------------*/
+@media (max-width: 400px) {
+  .navMenu.open {
+    width: 100vw; /* Full screen width */
+    height: 100vh;
+    
+  }
+
+  /* Sidebar menu and cross icon should also work for smaller screens */
+  .sidebarMenu {
+    display: block !important; /* Force display on small screens */
+  }
+
+  .navbarListItem {
+    text-align: center;
+    margin: 1.5rem 0;
+    font-size: 1.2rem; /* Slightly larger text for smaller screens */
+  }
+}
+
+/*---------------------- Extra small screens (max-width: 300px)--------------------*/
+@media (max-width: 300px) {
+  .navMenu.open {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .sidebarMenu {
+    display: block !important; /* Ensure it's visible */
+  }
+
+  .navbarListItem {
+    font-size: 1.1rem;
   }
 }
