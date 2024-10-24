@@ -61,7 +61,7 @@ position: relative;
   display: block;
   margin: 50px auto;
   width: fit-content;
-  border: 1px solid #ff004f;
+  border: 1px solid #0ef;
   padding: 14px 50px;
   border-radius: 6px;
   text-decoration: none;
@@ -69,5 +69,44 @@ position: relative;
   transition: 0.5s;
 }
 .btn:hover{
-  background: #ff004f;
+  background: #0ef;
+}
+/* Media Queries for Responsiveness */
+
+/* Tablet screen */
+@media (max-width: 768px) {
+  .sub-title {
+    font-size: 1.5rem; /* Adjust title size for tablet */
+  }
+
+  .projectList {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column size */
+    grid-gap: 30px; /* Reduce gap for smaller screens */
+  }
+
+  .btn {
+    padding: 12px 40px; /* Adjust button padding */
+  }
+}
+/* Mobile screen */
+@media (max-width: 480px) {
+  .sub-title {
+    font-size: 1.2rem; /* Further reduce title size for mobile */
+  }
+
+  .projectList {
+    grid-template-columns: 1fr; /* Stack projects vertically */
+    margin: 20px; /* Reduce margin */
+  }
+
+  .layer {
+    padding: 0 20px; /* Adjust padding for the layer */
+  }
+
+  .layer h3 {
+    font-size: 1rem; /* Adjust heading size for mobile */
+  }
+  .layer p{
+    font-size:15px ;
+  }
 }
