@@ -12,8 +12,8 @@ const Contact = () => {
 
       {/* Contact Form */}
       <motion.div className="motionContainer" variants={slideIn("left", "tween", 0.2, 1)}>
-        <p className='sectionSubText'>Get In Touch</p>
-        <h3 className='sectionHeadText'>Contact.</h3>
+        
+        <h3 className='sectionHeadText'>Contact Me</h3>
         <form className='form'>
           <label className='label'>
             <span className='tag'>Your Name</span>

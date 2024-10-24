@@ -6,95 +6,114 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed; /* Navbar should be fixed to stay at the top */
+  position: fixed;
   top: 0;
-  z-index: 5; /* Ensure it's above video and content */
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
-  backdrop-filter: blur(5px); /* Optional: Adds a blur effect behind the navbar */
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
 }
-/* porfolio logo  */
 
-  .logo{
-    position: relative;
-    height: 4rem;
-    width: 4rem;
-    margin-top: 3rem;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-    z-index: 6;
-   
-  }
-  /* navList Item    */
-.navbarListItem{
- margin: 1rem;
- position: relative;
- cursor: pointer;
- opacity: 0;/* sliding animaion */
- animation:  slideTop 1s ease forwards; /* sliding animaion */
- 
+/* Portfolio logo */
+.logo {
+  position: relative;
+  height: 4rem;
+  width: 4rem;
+  margin-top: 3rem;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  z-index: 6;
+}
 
+/* Nav List Item */
+.navbarListItem {
+  margin: 1rem;
+  position: relative;
+  cursor: pointer;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  flex-direction: row;
 }
-/* sliding animaion start */
-.navbarListItem:nth-child(1) {
-  animation-delay: 0.1s; /* Add delay for smooth flow */
-}
-.navbarListItem:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.navbarListItem:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.navbarListItem:nth-child(4) {
-  animation-delay: 0.4s;
-}
-.navbarListItem:nth-child(5) {
-  animation-delay: 0.5s;
-}
-/* Add delays for more items if needed */
 
-/* sliding animaion end */
-.navbarListItem:hover{
-  color:#0ef;
+.navbarListItem:hover {
+  color: #0ef;
   padding-bottom: 0.5rem;
   border-bottom: 3px solid #0ef;
 }
-.ContactButton{
-  background-color: white;
-  color: black;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1rem;
-  border-radius: 2rem;
 
-}
-.Contactlogo{
-object-fit: cover;
-height: 1rem;
-width: 1rem;
-margin: 1rem;
-
-}
-/* sliding effect   */
+/* Sliding effect */
 @keyframes slideRight {
-  0%{
-    transform: translateX(-100px);/* Moves up from 100px above */
+  0% {
+    transform: translateX(-100px);
     opacity: 0;
   }
-  100%{
-    transform: translateX(0px); /* Moves to its original position */
+  100% {
+    transform: translateX(0px);
     opacity: 1;
   }
 }
-/* sliding animaion */
+
+/* Sliding animation */
 @keyframes slideTop {
-  0%{
-    transform: translateY(-100px);/* Moves up from 100px above */
+  0% {
+    transform: translateY(-100px);
     opacity: 0;
   }
-  100%{
-    transform: translateY(0px);/* Moves to its original position */
+  100% {
+    transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+/* Hide sidebar icons by default */
+.sidebarMenu,
+.sidebarCross {
+  display: none;
+}
+
+/*-------------------------------Tab Screen--------------------------*/
+@media (max-width: 600px) {
+  .navMenu {
+    display: none;
+  }
+
+  .navMenu.open {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 10;
+  }
+
+  /* Show sidebar menu icon when closed */
+  .sidebarMenu {
+    display: block;
+    z-index: 11;
+  }
+
+  /* Show cross icon when open */
+  .sidebarCross {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 15;
+  }
+
+  .navbarListItem {
+    opacity: 1;
+    margin: 1rem 0;
+    text-align: center;
+    color: white;
+  }
+
+  .navbarListItem:hover {
+    color: #0ef;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #0ef;
   }
 }
