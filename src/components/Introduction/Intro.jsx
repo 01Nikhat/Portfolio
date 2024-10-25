@@ -78,9 +78,9 @@ const Intro = () => {
             </p>
             </motion.div>
             <div className="social">
-              <a href="#"><box-icon type='logo' name='github'></box-icon></a>
-              <a href="#"><box-icon type='logo' name='linkedin-square'></box-icon></a>
-              <a href="#"><box-icon type='logo' name='facebook-circle'></box-icon></a>
+              <a href="https://github.com/01Nikhat"><box-icon type='logo' name='github'></box-icon></a>
+              <a href="https://www.linkedin.com/in/nikhat-parvin-8aa676150/"><box-icon type='logo' name='linkedin-square'></box-icon></a>
+              <a href="https://www.facebook.com/nikhat.parvin.12139"><box-icon type='logo' name='facebook-circle'></box-icon></a>
             </div>
             <button className='resumeButton' onClick={handleResumeClick}>
               <span>RESUME</span> 
