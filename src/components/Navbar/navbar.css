@@ -1,5 +1,4 @@
 /* General styles for the navbar */
-
 .navContainer {
   width: 100vw;
   height: 5rem;
@@ -7,7 +6,7 @@
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Space between items */
   position: fixed;
   top: 0;
   z-index: 5;
@@ -17,25 +16,32 @@
 
 /* Portfolio logo */
 .logo {
-  position: relative;
-  height: 4rem;
-  width: 4rem;
+  height: 4rem; /* Adjusted height */
+  width: 4rem; /* Adjusted width */
   margin-top: 3rem;
   opacity: 0;
   animation: slideRight 1s ease forwards;
   z-index: 6;
+  margin-right: auto; /* Pushes the logo to the left */
 }
 
 /* Nav List Item */
+.navbarList {
+  display: flex; /* Ensures that navbar items are in a row */
+  align-items: center; /* Center items vertically */
+  flex: 1; /* Allows this flex item to grow */
+  justify-content: center; /* Center align navbar items */
+}
+
 .navbarListItem {
-  margin: 1rem;
+  margin: 0 1.5rem; /* Add horizontal margin for spacing */
   position: relative;
   cursor: pointer;
   opacity: 0;
   animation: slideTop 1s ease forwards;
-  flex-direction: row;
 }
-/* sliding animation start */
+
+/* Sliding animation start */
 .navbarListItem:nth-child(1) {
   animation-delay: 0.1s; /* Add delay for smooth flow */
 }
@@ -141,7 +147,6 @@
   .navMenu.open {
     width: 100vw; /* Full screen width */
     height: 100vh;
-    
   }
 
   /* Sidebar menu and cross icon should also work for smaller screens */

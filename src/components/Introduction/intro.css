@@ -89,6 +89,8 @@
   animation-delay: .7s;
 }
 /* Scial Media on Home Page Animation   */
+
+
 .social a{
 display: inline-flex;
 justify-content: center;
@@ -205,6 +207,12 @@ z-index: 2;
     align-items: center;
     justify-content: center;
   }
+  .social a:hover{
+    background: #0ef;
+    color: #020718;
+    box-shadow: 0 0 20px #0ef;
+  
+  }
   
 }
 
@@ -238,6 +246,12 @@ z-index: 2;
   .resumeButton span {
     padding: 0.6rem 1rem; /* Smaller padding */
     font-size: 0.8rem; /* Smaller text */
+  }
+  .social a:hover{
+    background: #0ef;
+    color: #020718;
+    box-shadow: 0 0 20px #0ef;
+  
   }
 }
 
