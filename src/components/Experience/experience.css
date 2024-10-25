@@ -1,0 +1,93 @@
+/* Container Styles */
+.experienceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #1c1c1c;
+  color: #ffffff;
+}
+
+.experienceTag {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Experience Item Styles */
+.experienceList {
+  max-width: 800px;
+  width: 100%;
+}
+
+.experienceItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  transition: background-color 0.3s ease;
+}
+
+.experienceItem:hover {
+  background-color: #3a3a3a;
+}
+
+/* Year and Content Layout */
+.experienceYear {
+  width: 20%;
+  text-align: right;
+  padding-right: 20px;
+  border-right: 2px solid #555;
+}
+
+.year {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.experienceContent {
+  width: 80%;
+  padding-left: 20px;
+}
+
+.experienceRole {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.experienceCompany {
+  color: #5f9df7;
+}
+
+.experienceDescription {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Technology Badge Styles */
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.technologyBadge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #7d4fc2, #3a77f7);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.technologyBadge:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #3a77f7, #7d4fc2);
+}

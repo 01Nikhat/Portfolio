@@ -6,6 +6,7 @@ import Skills from './components/Skills/skills'
 import AboutMe from './components/AboutMe/AboutMe'
 import Project from './components/Projects/Project'
 import Contact from './components/Contact/Contact'
+import Experience from './components/Experience/experience'
 
 function App() {
   
@@ -27,6 +28,11 @@ function App() {
       {/* Section for Skills */}
       <section id="skills">
         <Skills /> {/* This is your Skills section */}
+      </section>
+
+      {/* Section for Experience */}
+      <section id="experience">
+        <Experience /> {/* This is your Skills section */}
       </section>
 
       {/*  Projects, Experience, etc. */}
