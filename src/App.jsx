@@ -6,7 +6,7 @@ import Skills from './components/Skills/skills'
 import AboutMe from './components/AboutMe/AboutMe'
 import Project from './components/Projects/Project'
 import Contact from './components/Contact/Contact'
-import Experience from './components/Experience/experience'
+import Experience from './components/Experience/Experience'
 
 function App() {
   
