@@ -18,8 +18,8 @@ const Project = () => {
             <div className="layer">
             <h3>Food Restaurant Website</h3>
             <p>I have developed a fully functional food restaurant website with distinct interfaces – one for users and another for admin management. Built using React.js for the frontend and Node.js with MongoDB for the backend, it ensures a seamless user experience. The admin interface allows managing products by adding or deleting them and updating order statuses, such as changing 'Food Processing' to 'Out for Delivery.' Additionally, I implemented and tested a payment method for secure transactions and integrated an email feature for notifications. </p>
-            <a href="https://food-restaurant-website-frontend.onrender.com/" target="_blank" rel="noopener noreferrer">Go to the User Application</a>
-            <a href="https://food-restaurant-website-admin.onrender.com/" target="_blank" rel="noopener noreferrer">Go to the Admin Application</a>
+            <a href="https://food-restaurant-website-frontend.onrender.com/" target="_blank" rel="noopener noreferrer">click here User Application</a>
+            <a href="https://food-restaurant-website-admin.onrender.com/" target="_blank" rel="noopener noreferrer">click here Admin Application</a>
             </div>
           </div>
           <div className="project">

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./intro.css";
 import Video from '../../images/video.mp4';
-import Resume from "../../images/Resume.pdf";
+import Resume from "../../images/Nikhat-Resume.pdf";
 import Typewriter from 'typewriter-effect';
 import 'boxicons';
 import Modal from "../modal/modal.jsx"; // Import the Modal component
