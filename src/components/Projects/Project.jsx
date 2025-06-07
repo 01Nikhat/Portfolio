@@ -13,7 +13,7 @@ const Project = () => {
       <div className="Container">
         <h1 className="sub-title">My Projects</h1>
         <div className="projectList">
-          <div className="project">
+{/*           <div className="project">
             <img src={project5} />
             <div className="layer">
             <h3>Food Restaurant Website</h3>
@@ -21,7 +21,7 @@ const Project = () => {
             <a href="https://food-restaurant-website-frontend.onrender.com/" target="_blank" rel="noopener noreferrer">click here User Application</a>
             <a href="https://food-restaurant-website-admin.onrender.com/" target="_blank" rel="noopener noreferrer">click here Admin Application</a>
             </div>
-          </div>
+          </div> */}
           <div className="project">
             <img src={project6} />
             <div className="layer">
