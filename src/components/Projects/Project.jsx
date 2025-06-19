@@ -26,7 +26,7 @@ const Project = () => {
             <img src={project6} />
             <div className="layer">
               <h3>Artify</h3>
-              <p>In the Artify project, I have implemented two powerful features: background removal from images and text-to-image generation. These functionalities enhance user creativity by allowing them to easily edit images and generate custom visuals from textual descriptions. This project showcases my ability to integrate advanced image processing and AI-driven features into web applications.</p>
+              <p>In the Artify project, I have implemented two powerful features: background removal from images and text-to-image generation. These functionalities enhance user creativity by allowing them to easily edit images and generate custom visuals from textual descriptions.</p>
               <a href="https://artify-clients.onrender.com/" target="_blank" rel="noopener noreferrer">Click here</a>
             </div>
           </div>
