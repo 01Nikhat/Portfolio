@@ -20,7 +20,7 @@ const Experience = () => {
           </div>
           <div className="experienceContent">
             <h6 className="experienceRole">
-              Web Developer - <span className="experienceCompany">INA India Pvt. Ltd</span>
+              Software Engineer - <span className="experienceCompany">INA India Pvt. Ltd</span>
             </h6>
            
              <p className="experienceDescription">
@@ -45,7 +45,7 @@ const Experience = () => {
           </div>
           <div className="experienceContent">
             <h6 className="experienceRole">
-              App Developer - <span className="experienceCompany">INA India Pvt. Ltd</span>
+              Software Engineer - <span className="experienceCompany">INA India Pvt. Ltd</span>
             </h6>
            <p className="experienceDescription">
               • Developed a dynamic BMS dashboard using React and Chart.js to visualize real-time cell performance metrics.<br />
@@ -55,8 +55,8 @@ const Experience = () => {
             </p>
 
             <div className="technologies">
-              <span className="technologyBadge">React Native</span>
-              <span className="technologyBadge">Tailwind CSS</span>
+              <span className="technologyBadge">React.js</span>
+              <span className="technologyBadge">CSS</span>
               <span className="technologyBadge">REST APIs</span>
             </div>
           </div>
