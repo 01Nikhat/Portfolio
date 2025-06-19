@@ -42,23 +42,25 @@ const Project = () => {
             <img src={project4} />
             <div className="layer">
               <h3>Portfolio Website</h3>
-              <p>A personal portfolio website built using React.js, HTML, and CSS to showcase projects and skills. It features a dynamic user interface with smooth animations, a typewriter effect, and responsive design. The site includes sections for about, projects, contact, and social media links, providing an engaging way to highlight professional work and achievements.</p>
+              <p>A personal portfolio website built using React.js, HTML, and Tailwind CSS to showcase projects and skills. It features a dynamic user interface with smooth animations, a typewriter effect, and responsive design. The website includes sections for about, projects, contact, and social media links, providing an engaging way to highlight professional work and achievements.</p>
             </div>
           </div>
           <div className="project">
             <img src={project2} />
             <div className="layer">
               <h3>Myntra Clone</h3>
-              <p>I have created a Myntra clone website with essential features such as user login, signup, product browsing, and a cart page, all built using React.JS . This eCommerce platform allows users to sign up, log in, explore a variety of products, and manage their shopping cart seamlessly. Additionally, I’ve included features like product search, filters, and a smooth checkout process, aiming to replicate the key functionality of Myntra while enhancing the user experience with a clean and responsive design. This project showcases my ability to build dynamic and feature-rich eCommerce websites.</p>
-            </div>
+             <p>
+              Developed a responsive Myntra clone using React.js with key eCommerce features including user login/signup, product browsing, search, filters, cart management, and a smooth checkout process. The platform replicates core Myntra functionality while enhancing user experience through clean UI and seamless navigation. This project highlights my ability to build dynamic, feature-rich eCommerce applications.
+            </p>
+             </div>
           </div>
-          <div className="project">
+{/*           <div className="project">
             <img src={project1} />
             <div className="layer">
               <h3>Portfolio Website</h3>
               <p>A personal portfolio website built using React.js, HTML, and CSS to showcase projects and skills. It features a dynamic user interface with smooth animations, a typewriter effect, and responsive design. The site includes sections for about, projects, contact, and social media links, providing an engaging way to highlight professional work and achievements.</p>
             </div>
-          </div>
+          </div> */}
         </div>
         <a href="#" className='btn'>See More</a>
       </div>
