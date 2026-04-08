@@ -67,8 +67,14 @@
 
 .experienceDescription {
   margin-bottom: 12px;
+  margin-left: 16px;
+  padding-left: 10px;
   line-height: 1.6;
   color: #ccc;
+}
+.experienceDescription li {
+  margin-bottom: 6px;
+  line-height: 1.5;
 }
 
 /* Technology Badge Styles */
