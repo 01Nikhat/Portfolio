@@ -16,7 +16,7 @@ const Experience = () => {
         {/* Experience 1 */}
         <div className="experienceItem">
           <div className="experienceYear">
-            <p className="year">Mar 2024- Apr 2025</p>
+            <p className="year">Mar 2024- Present</p>
           </div>
           <div className="experienceContent">
             <h6 className="experienceRole">
@@ -24,11 +24,12 @@ const Experience = () => {
             </h6>
            
              <p className="experienceDescription">
-                • Built a comprehensive restaurant web app using React and Tailwind CSS, featuring separate user and admin panels for efficient management.<br />
-                • Implemented a real-time time-slot booking system with calendar and time-picker controls, enabling the admin to manage availability.<br />
-                • Enhanced menu browsing using debounced search, lazy loading, and pagination for smoother performance.<br />
-                • Optimized API communication with Axios to handle user search, bookings, order updates, and contact form submissions.
-              </p>
+               • Built responsive and accessible UI using React.js, ensuring smooth user interactions 
+               • Developed a real-time booking system with user and admin panels 
+               • Enhanced performance using debounced search, lazy loading, and pagination 
+               • Integrated RESTful APIs using Axios for seamless data handling 
+               • Designed reusable and scalable components for maintainable UI architecture 
+               • Improved performance by reducing re-renders and optimizing load time by approx 30% </p>
            
             <div className="technologies">
               <span className="technologyBadge">React.js</span>
@@ -41,18 +42,19 @@ const Experience = () => {
         {/* Experience 2 */}
         <div className="experienceItem">
           <div className="experienceYear">
-            <p className="year">Apr 2023- jan 2024</p>
+            <p className="year">Aug 2023- Jan 2024</p>
           </div>
           <div className="experienceContent">
             <h6 className="experienceRole">
               Software Engineer - <span className="experienceCompany">INA India Pvt. Ltd</span>
             </h6>
            <p className="experienceDescription">
-              • Developed a dynamic BMS dashboard using React and Chart.js to visualize real-time cell performance metrics.<br />
-              • Minimized system errors by 40% through robust API integration and comprehensive input validation.<br />
-              • Implemented parameter-based and date-range search with debounced input; optimized data rendering using pagination and lazy loading, and visualized custom datasets with interactive line charts.<br />
-              • Enabled CSV file uploads with backend parsing and MySQL storage using custom REST APIs, increasing data flexibility and accessibility.
-            </p>
+              • Developed a real-time dashboard using React.js and Tailwind CSS
+              • Integrated and consumed REST APIs for live and historical data
+              • Built modular reusable components for data visualization
+              • Optimized Chart.js performance for large datasets
+              • Implemented search, filtering, and pagination
+              • Improved load time by approx 23% through efficient data handling and rendering optimizations </p>
 
             <div className="technologies">
               <span className="technologyBadge">React.js</span>
