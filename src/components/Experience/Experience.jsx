@@ -24,12 +24,12 @@ const Experience = () => {
             </h6>
            
              <p className="experienceDescription">
-               • Built responsive and accessible UI using React.js, ensuring smooth user interactions 
-               • Developed a real-time booking system with user and admin panels 
-               • Enhanced performance using debounced search, lazy loading, and pagination 
-               • Integrated RESTful APIs using Axios for seamless data handling 
-               • Designed reusable and scalable components for maintainable UI architecture 
-               • Improved performance by reducing re-renders and optimizing load time by approx 30% </p>
+                   • Built responsive and accessible UI using React.js, ensuring smooth user interactions 
+                   • Developed a real-time booking system with user and admin panels 
+                   • Enhanced performance using debounced search, lazy loading, and pagination 
+                   • Integrated RESTful APIs using Axios for seamless data handling 
+                   • Designed reusable and scalable components for maintainable UI architecture 
+                   • Improved performance by reducing re-renders and optimizing load time by approx 30% </p>
            
             <div className="technologies">
               <span className="technologyBadge">React.js</span>
@@ -49,12 +49,12 @@ const Experience = () => {
               Software Engineer - <span className="experienceCompany">INA India Pvt. Ltd</span>
             </h6>
            <p className="experienceDescription">
-              • Developed a real-time dashboard using React.js and Tailwind CSS
-              • Integrated and consumed REST APIs for live and historical data
-              • Built modular reusable components for data visualization
-              • Optimized Chart.js performance for large datasets
-              • Implemented search, filtering, and pagination
-              • Improved load time by approx 23% through efficient data handling and rendering optimizations </p>
+                  • Developed a real-time dashboard using React.js and Tailwind CSS
+                  • Integrated and consumed REST APIs for live and historical data
+                  • Built modular reusable components for data visualization
+                  • Optimized Chart.js performance for large datasets
+                  • Implemented search, filtering, and pagination
+                  • Improved load time by approx 23% through efficient data handling and rendering optimizations </p>
 
             <div className="technologies">
               <span className="technologyBadge">React.js</span>
