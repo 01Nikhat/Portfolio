@@ -116,36 +116,38 @@ z-index: 2;
 }
 /* Resume button animation start here  */
 .resumeButton{
- text-align: center;
- text-decoration: none;
- letter-spacing: 4px;
- box-shadow: 0 0 50px rgba(0,0,0,0,0.8);
- color: #0ef;
- background: linear-gradient(90deg,#0ef,#ff22a3,#fca93f,#269af5);
- background-size: 400px;
- border-radius: 5rem;
- position: absolute; /* Change to absolute */
- top: 85%; /* Position from the top */
-  left: 50%; /* Position from the left */
-  transform: translate(-50%, -50%); /* Center the element */
-  margin-top: 5rem;
- z-index: 1;
-  
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 3px;
+  color: #0ef;
+
+  background: linear-gradient(90deg,#0ef,#ff22a3,#fca93f,#269af5);
+  background-size: 400%;
+
+  border-radius: 5rem;
+  position: absolute;
+  top: 80%; /* slightly better vertical alignment */
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 1;
+  box-shadow: 0 0 25px rgba(0, 238, 255, 0.3); /* fixed + cleaner glow */
 }
 .resumeButton span{
   display: flex;
-  padding: 25px 30px;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px 28px;
   min-width: 150px;
+
   background: #020718;
-  mix-blend-mode: darken;
   border-radius: 0.8rem;
-  padding: 25px 30px; /* Keep the original padding */
-  max-width: 90%; /* Use percentage instead of vw to prevent overflow */
-  box-sizing: border-box; /* Ensure padding is included in the width */
-  
+
+  box-sizing: border-box;
 }
 .resumeButton:hover{
-  animation: animate-gradient 10s linear infinite;
+  animation: animate-gradient 6s linear infinite;
 }
 @keyframes animate-gradient {
   0%{
@@ -156,17 +158,20 @@ z-index: 2;
   }
 }
 .resumeButton:before{
-  content:"" ;
-  position:absolute ;
-  top:-4px;
-  bottom: -4px;
-  left: -4px;
-  right: -4px;
+  content:"";
+  position:absolute;
+  top:-3px;
+  bottom:-3px;
+  left:-3px;
+  right:-3px;
+
   background: linear-gradient(90deg,#269af5,#ff22a3,#fca93f,#269af5);
-  background-size: 400px;
+  background-size: 400%;
+
   z-index: -1;
-  filter: blur(20px) ;
-  transition: 0.6s;
+  filter: blur(15px); /* reduced for cleaner glow */
+  opacity: 0.7;
+  transition: 0.4s;
 }
 .resumeButton:hover::before{
   opacity: 1;
