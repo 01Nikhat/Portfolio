@@ -20,7 +20,7 @@ const Experience = () => {
           </div>
           <div className="experienceContent">
             <h6 className="experienceRole">
-              Software Engineer - <span className="experienceCompany">INA Internet Group</span>
+              Software Developer - <span className="experienceCompany">INA Internet Group</span>
             </h6>
            
              <ul className="experienceDescription">
@@ -47,7 +47,7 @@ const Experience = () => {
           </div>
           <div className="experienceContent">
             <h6 className="experienceRole">
-              Software Engineer - <span className="experienceCompany">INA Internet Group</span>
+              Software Developer - <span className="experienceCompany">INA Internet Group</span>
             </h6>
            <ul className="experienceDescription">
               <li>Developed a real-time dashboard using React.js and Tailwind CSS</li>
