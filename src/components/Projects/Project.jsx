@@ -62,7 +62,7 @@ const Project = () => {
             </div>
           </div> */}
         </div>
-        <a href="#" className='btn'>See More</a>
+        <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer" className='btn'>See More on GitHub</a>
       </div>
     </div>
   )
