@@ -34,7 +34,8 @@
 }
 
 .experienceItem:hover {
-  background-color: #ff004f;
+  background-color: rgba(93, 141, 247, 0.15);
+  border-left: 3px solid #5f9df7;
 }
 
 /* Year and Content Layout */
