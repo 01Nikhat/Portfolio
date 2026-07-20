@@ -103,7 +103,7 @@ const Contact = () => {
     setError('');
 
     emailjs
-      .sendForm('service_af7q95a', '6hzz2zf', form.current)
+     .sendForm('service_af7q95a', 'template_w7yabjn', form.current)
       .then(
         (result) => {
           console.log('SUCCESS!', result.text);
