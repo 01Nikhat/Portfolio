@@ -88,8 +88,6 @@ import { slideIn } from "./utils/motion.js";
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
-emailjs.init('M8DHKDqiR1KEG-cb3');
-
 const Contact = () => {
   const form = useRef();
   const [loading, setLoading] = useState(false);
@@ -100,13 +98,23 @@ const Contact = () => {
     setLoading(true);
     setFeedback({ message: '', type: '' });
 
+    // Debug: Log form data
+    const formData = new FormData(form.current);
+    console.log('Form Data:', {
+      from_name: formData.get('from_name'),
+      from_email: formData.get('from_email'),
+      message: formData.get('message'),
+    });
+
     emailjs
       .sendForm(
-        'service_af7q95a',      // Your service ID ✓
-        '6hzz2zf',               // CORRECT template ID (was w7yabjn)
-        form.current
+        'service_af7q95a',      // Service ID
+        '6hzz2zf',              // Template ID
+        form.current,
+        'M8DHKDqiR1KEG-cb3'     // Public Key (try passing directly here)
       )
-      .then(() => {
+      .then((response) => {
+        console.log('SUCCESS:', response);
         setFeedback({ 
           message: 'Email sent successfully! ✓', 
           type: 'success' 
@@ -114,11 +122,12 @@ const Contact = () => {
         form.current.reset();
       })
       .catch((error) => {
+        console.log('FULL ERROR:', error);
+        console.log('Error Text:', error.text);
         setFeedback({ 
-          message: `Failed to send: ${error.text}`, 
+          message: `Failed: ${error.text || error.message}`, 
           type: 'error' 
         });
-        console.log('Error:', error);
       })
       .finally(() => setLoading(false));
   };
