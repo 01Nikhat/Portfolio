@@ -28,12 +28,12 @@ const AboutMe = () => {
       className="rightContainer">
         <h2> <span className='about'>About</span> Me</h2>
         <p>
-          I'm Nikhat, a Software Developer at INA Internet Group with close to 3 years of experience building responsive, user-focused web applications.
-         I specialize in React.js, JavaScript (ES6+), Redux Toolkit, and Tailwind CSS, with hands-on experience integrating REST APIs and working across 
-         the full frontend development lifecycle — from component architecture to performance optimization.
-         I've delivered production systems including a real-time booking platform and an EV battery monitoring dashboard, along with personal projects like Artify, an AI-powered image editing tool.
-         I enjoy solving UI challenges, writing clean and reusable code, and continuously expanding my skill set into backend technologies like Node.js and TypeScript.
-        </p>
+         I'm Nikhat, a Software Developer at INA Internet Group with nearly 3 years of experience building responsive, user-focused web applications.
+         I mainly work with React.js, JavaScript (ES6+), Redux Toolkit, and Tailwind CSS, and I enjoy turning ideas into fast, clean interfaces, from component structure to performance tuning.
+         At work, I've built the patient and admin panels for a doctor appointment platform, along with its booking APIs and JWT login, and a real-time restaurant reservation platform.
+         Outside work, I built Artify, a full-stack AI app for text-to-image generation and background removal with Razorpay payments.
+         I'm currently learning TypeScript and Next.js to keep growing as a full-stack developer.
+       </p>
       </motion.div>
     </div>
   );
