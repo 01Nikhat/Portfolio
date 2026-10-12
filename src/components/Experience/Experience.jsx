@@ -49,7 +49,7 @@ const Experience = () => {
         {/* Experience 2 */}
         <div className="experienceItem">
           <div className="experienceYear">
-            <p className="year">Oct 2023 - Mar 2024</p>
+            <p className="year">Aug 2023 - Mar 2024</p>
           </div>
           <div className="experienceContent">
             <h6 className="experienceRole">
